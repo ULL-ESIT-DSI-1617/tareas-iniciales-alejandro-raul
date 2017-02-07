@@ -1,0 +1,28 @@
+{
+  "name": "tareas-iniciales",
+  "version": "0.0.0",
+  "description": "Toma de contacto con gitbook, gh-pages, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gitbook build",
+    "serve": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ULL-ESIT-DSI-1617/tareas-iniciales-alejandro-raul.git"
+  },
+  "keywords": [
+    "libro",
+    "gitbook",
+    "github"
+  ],
+  "author": "alejandro-raul",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-DSI-1617/tareas-iniciales-alejandro-raul/issues"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.0"
+  }
+}
