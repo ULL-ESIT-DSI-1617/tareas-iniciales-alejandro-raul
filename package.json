@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gitbook build",
-    "serve": "gitbook serve"
+    "serve": "gitbook serve",
+    "deploy": "node index.js",
+    "deploy:gitbook": "git push gitbook master"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
     "url": "https://github.com/ULL-ESIT-DSI-1617/tareas-iniciales-alejandro-raul/issues"
   },
   "dependencies": {
-    "gitbook-cli": "^2.3.0"
+    "gh-pages": "^0.12.0",
+    "gitbook-cli": "^2.3.0",
+    "gulp": "^3.9.1"
   }
 }
