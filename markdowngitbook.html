@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4. Atom · Un título</title>
+        <title>5. MarkDown y GitBook · Un título</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="markdowngitbook.html" />
     
-    
-    <link rel="prev" href="github.html" />
+    <link rel="prev" href="atom.html" />
     
 
     </head>
@@ -141,7 +139,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="atom.html">
+        <li class="chapter " data-level="1.5" data-path="atom.html">
             
                 <a href="atom.html">
             
@@ -154,7 +152,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="markdowngitbook.html">
+        <li class="chapter active" data-level="1.6" data-path="markdowngitbook.html">
             
                 <a href="markdowngitbook.html">
             
@@ -197,7 +195,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >4. Atom</a>
+        <a href="." >5. MarkDown y GitBook</a>
     </h1>
 </div>
 
@@ -212,12 +210,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="atom">Atom</h1>
-<p>Se ha instalado Atom, el editor desarrollado por GitHub. Para ello hay que ejecutar los siguientes comandos en la consola:</p>
-<pre><code>sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-get update
-sudo apt-get install atom
-</code></pre><p><img src="images/atom.PNG" alt="atom"></p>
+                                <h1 id="markdown-y-gitbook">MarkDown y GitBook</h1>
+<p>Gitbook es un paquete de node que permite construir libros para la documentaci&#xF3;n de un proyecto mediante <strong>Github/Git</strong> y ficheros Markdown. Tambi&#xE9;n se puede utilizar Gitbook mediante su p&#xE1;gina web oficial, donde se inicia sesi&#xF3;n mediante Github, Facebook, Twitter o Google+. Para la creaci&#xF3;n de un libro, basta con crear un nuevo libro dentro de la plataforma, a&#xF1;adir un fichero README.md y un SUMMARY.md y posteriormente crear los archivos Markdown correspondiente, guardar los cambios y previsualizar el libro en su enlace correspondiente.</p>
+<p>Para realizar el despliegue de un libro en Github, lo que hay que  hacer es tener disponible una rama Gh-Pages para mostrar el libro en la Github Pages. Para ello se han incluido unas &quot;tareas&quot; en el fichero <strong>package.json</strong>:</p>
+<pre><code>&quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,
+    &quot;build&quot;: &quot;gitbook build&quot;,
+    &quot;serve&quot;: &quot;gitbook serve&quot;,
+    &quot;deploy&quot;: &quot;node index.js&quot;,
+    &quot;deploy:gitbook&quot;: &quot;git push gitbook master&quot;
+  }
+</code></pre><p>As&#xED;, mediante el comando <strong><em>npm run build</em></strong> creamos el sitio web est&#xE1;tico al generar los htmls correspondientes a los ficheros markdown y mediante <strong><em>npm run deploy</em></strong> se ejecuta el siguiente script:</p>
+<pre><code>const ghpages = require(&apos;gh-pages&apos;)
+const path = require(&apos;path&apos;)
+
+const bookPath = path.join(__dirname, &apos;_book&apos;)
+
+ghpages.publish(bookPath, function (err) {
+  console.log(&apos;Publicaci&#xF3;n finalizada&apos;)
+})
+</code></pre><p>Este script crear&#xE1; un clon temporal del repositorio actual, crear&#xE1; una rama <em>gh-page</em> si no existe ya, copiar&#xE1; todos los archivos de la ruta de la base, har&#xE1; <em>commit</em> de los cambios y un <em>push</em>.</p>
+<p>Una vez se ha realizado el despliegue del libro, al realizar el commit y el push correspondiente, se podr&#xE1; visualizar el libro sin ning&#xFA;n tipo de problemas en la GithubPages correspondiente.</p>
+<h3 id="desplegar-libro-en-wwwgitbookcom">Desplegar libro en www.gitbook.com</h3>
+<p>Para desplegar un libro en www.gitbook.com primero se ha tenido que generar un token desde el apartado Aplicaciones/Tokens dentro de los ajustes de nuestro perfil en dicha p&#xE1;gina. A continuaci&#xF3;n, hay que a&#xF1;adir un gitbook remoto mediante el comando <strong><em>git remote add gitbook <a href="https://username:apitoken@git.gitbook.com/username/repo.git" target="_blank">https://username:apitoken@git.gitbook.com/username/repo.git</a></em></strong>. Despu&#xE9;s mediante el comando <strong><em>npm run deploy:gitbook</em></strong> que hace un push al gitbook, ya se podr&#xED;a ver el libro desde el sitio web.</p>
+<h3 id="gitbook-desktop">GitBook Desktop</h3>
+<p>Para instalar este editor solo tenemos que ejecutar el asistente de instalaci&#xF3;n que se descarga desde <a href="https://www.gitbook.com/editor" target="_blank">https://www.gitbook.com/editor</a>, disponible para Windows, Mac y Linux.</p>
+<p><img src="images/gitbook-editor.png" alt="gitbook editor"></p>
 
                                 
                                 </section>
@@ -245,14 +263,10 @@ sudo apt-get install atom
 
             
                 
-                <a href="github.html" class="navigation navigation-prev " aria-label="Previous page: 3. GitHub">
+                <a href="atom.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 4. Atom">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="markdowngitbook.html" class="navigation navigation-next " aria-label="Next page: 5. MarkDown y GitBook">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -261,7 +275,7 @@ sudo apt-get install atom
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4. Atom","level":"1.5","depth":1,"next":{"title":"5. MarkDown y GitBook","level":"1.6","depth":1,"path":"markdowngitbook.md","ref":"markdowngitbook.md","articles":[]},"previous":{"title":"3. GitHub","level":"1.4","depth":1,"path":"github.md","ref":"github.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Un título","language":"es","gitbook":"*"},"file":{"path":"atom.md","mtime":"2017-02-08T18:02:09.692Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-08T23:24:45.654Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5. MarkDown y GitBook","level":"1.6","depth":1,"previous":{"title":"4. Atom","level":"1.5","depth":1,"path":"atom.md","ref":"atom.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./txt","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Un título","language":"es","gitbook":"*"},"file":{"path":"markdowngitbook.md","mtime":"2017-02-08T23:21:51.032Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-08T23:24:45.654Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
