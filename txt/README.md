@@ -1,3 +1,16 @@
 # Tareas iniciales
 
-TODO: Descripción de las tareas iniciales
+En esta práctica se realizará un tutorial en el que se describirán las diferente herramientas utilizadas y el proceso de instalación.
+
+* Nodejs.
+* Github.
+* Atom.
+* Cloud9.
+* MarkDown.
+* GitBook
+* Pandoc.
+
+
+[Página de la práctica 1](https://ull-esit-dsi-1617.github.io/tareas-iniciales-alejandro-raul/)
+[Página personal Alejandro Díaz Cueca]()
+[Página personal Raúl Martín Morales]()
