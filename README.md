@@ -12,5 +12,7 @@ En esta práctica se realizará un tutorial en el que se describirán las difere
 
 
 [Página de la práctica 1](https://ull-esit-dsi-1617.github.io/tareas-iniciales-alejandro-raul/)
-[Página personal Alejandro Díaz Cueca]()
-[Página personal Raúl Martín Morales]()
+
+[Página personal Alejandro Díaz Cueca](https://alejandrdiaz.github.io/)
+
+[Página personal Raúl Martín Morales](https://alu0100769579.github.io/RaulMartinMorales/)
