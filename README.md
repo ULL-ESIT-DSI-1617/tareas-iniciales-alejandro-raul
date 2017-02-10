@@ -10,6 +10,17 @@ En esta práctica se realizará un tutorial en el que se describirán las difere
 * GitBook
 * Pandoc.
 
+Para contruir el libro deberá ejecutar en la raíz del repo:
+
+```
+npm run install
+```
+Una vez hecho esto ejecutando los siguientes comandos podrá desplegar el libro para visualizarlo en local mediante el puerto 4000 a través del navegador:
+
+```
+npm run build
+npm run serve
+```
 
 [Página de la práctica 1](https://ull-esit-dsi-1617.github.io/tareas-iniciales-alejandro-raul/)
 
