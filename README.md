@@ -15,7 +15,10 @@ Para contruir el libro deberá ejecutar en la raíz del repo:
 ```
 npm run install
 ```
-Una vez hecho esto ejecutando los siguientes comandos podrá desplegar el libro para visualizarlo en local mediante el puerto 4000 a través del navegador:
+
+Con este comando se instalan las dependencias recogidas en el fichero **_package.json_** necesarias para instalar el gitbook.
+
+Una vez hecho esto, ejecutando los siguientes comandos podrá desplegar el libro para visualizarlo en local mediante el puerto 4000 a través del navegador:
 
 ```
 npm run build
