@@ -10,7 +10,7 @@ En esta práctica se realizará un tutorial en el que se describirán las difere
 * GitBook
 * Pandoc.
 
-Para contruir el libro deberá ejecutar en la raíz del repo:
+Para construir el libro deberá ejecutar en la raíz del repo:
 
 ```
 npm run install
