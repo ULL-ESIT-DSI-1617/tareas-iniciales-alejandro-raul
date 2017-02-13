@@ -25,7 +25,11 @@ npm run build
 npm run serve
 ```
 
-[Página de la práctica 1](https://ull-esit-dsi-1617.github.io/tareas-iniciales-alejandro-raul/)
+[Descripción de la tarea](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/practicas/practicatareasiniciales.html)
+
+[Libro en Gh-Pages](https://ull-esit-dsi-1617.github.io/tareas-iniciales-alejandro-raul/)
+
+[Libro en GitBook](https://alu0100769579.gitbooks.io/tareas-iniciales/)
 
 [Página personal Alejandro Díaz Cueca](https://alejandrdiaz.github.io/)
 
